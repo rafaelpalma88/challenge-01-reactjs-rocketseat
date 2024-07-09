@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import './App.css'
 
-import { Trash } from '@phosphor-icons/react'
 import { FormIncludeTask } from './components/FormIncludeTask'
 import { TaskList } from './components/TaskList'
+
+import styles from './App.module.css'
+
+import logo from './assets/Logo.png'
 
 export interface ITask {
   id: string
@@ -32,14 +33,16 @@ function App() {
     const newArrayTasks: ITask[] = tasks.map((task) =>
       task.id === id ? { ...task, status: 'COMPLETED' } : task
     )
-
     setTasks(newArrayTasks)
   }
 
   return (
     <>
-      <h2>To do List</h2>
-
+      <header className={styles.header}>
+        <div className={styles.title}>
+          <img src={logo} alt='Todo' />
+        </div>
+      </header>
       <FormIncludeTask onIncludeTask={handleAddTask} />
 
       <TaskList

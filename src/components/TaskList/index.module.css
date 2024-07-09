@@ -1,0 +1,74 @@
+.wrapper {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.tasksSumBox {
+  color: var(--blue);
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.tasksSumNumber {
+  background-color: var(--gray-400);
+  font-weight: bold;
+  color: var(--white);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 10px;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  margin-left: 0.5rem;
+}
+.emptyTasksBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.paragraph {
+  margin-bottom: 0.75rem;
+}
+.clipboardImg {
+  margin-bottom: 2.5rem;
+  width: 56px;
+  height: 56px;
+  border: 0;
+}
+.boxTask {
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-400);
+  border-radius: 10px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  color: var(--white);
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.buttonTrash {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.buttonTrash:hover {
+  color: var(--danger);
+}
+.boxCompleteTask {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.buttonCompleteTask {
+  font-size: 0px;
+}
+.taskCompleted {
+  text-decoration: line-through;
+  color: var(--gray-300);
+  flex: 1;
+  margin: 0px;
+}
+.notCompleted {
+  flex: 1;
+  margin: 0px;
+}
