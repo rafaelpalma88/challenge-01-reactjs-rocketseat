@@ -16,7 +16,9 @@ export function FormIncludeTask({ onIncludeTask }: IFormIncludeTask) {
     formState: { errors },
   } = useForm<IFormInput>()
 
-  const onSubmit: SubmitHandler<IFormInput> = ({ newTask }: IFormInput) => {
+  const handleIncludeTask: SubmitHandler<IFormInput> = ({
+    newTask,
+  }: IFormInput) => {
     const createdTask: ITask = {
       id: uuid(),
       title: newTask,
@@ -30,7 +32,7 @@ export function FormIncludeTask({ onIncludeTask }: IFormIncludeTask) {
 
   return (
     <div className={styles.wrapper}>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
+      <form className={styles.form} onSubmit={handleSubmit(handleIncludeTask)}>
         <input
           className={styles.input}
           {...register('newTask', { required: true })}
