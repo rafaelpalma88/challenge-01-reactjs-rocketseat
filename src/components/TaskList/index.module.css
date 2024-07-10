@@ -9,6 +9,7 @@
   justify-content: space-between;
   font-weight: bold;
   margin-bottom: 2rem;
+  flex-wrap: wrap;
 }
 .tasksSumNumber {
   background-color: var(--gray-400);
@@ -71,4 +72,13 @@
 .notCompleted {
   flex: 1;
   margin: 0px;
+}
+@media (max-width: 640px) {
+  .tasksSumBox {
+    flex-direction: column;
+  }
+
+  .tasksSumBox > * + * {
+    margin-top: 1rem;
+  }
 }
